@@ -10,5 +10,7 @@
   border-radius: 50px;
 }
 body{
-    background-color:bisque ;
+    background-image: url(../img/sfondo.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
 }

@@ -23,20 +23,23 @@ const prezzoViaggio = numeroChilometri * prezzoKm;
 const  minorenne = (prezzoViaggio * 20 / 100)    
 
    
- const  over = (prezzoViaggio * 40 / 100)    
+const  over = (prezzoViaggio * 40 / 100)    
      
+const totalMino = (prezzoViaggio - minorenne);
+
+const totalOver = (prezzoViaggio - over);
 
 
 if (numeroEta < 18 ){
 
-    document.getElementById('bigliettoPrezzo').innerHTML = (prezzoViaggio - minorenne) + '€ ' ;
+    document.getElementById('bigliettoPrezzo').innerHTML = (totalMino.toFixed(2)) + '€ ' ;
 
 } else if (numeroEta > 65){
 
-    document.getElementById('bigliettoPrezzo').innerHTML = (prezzoViaggio - over) + '€ ' ;
+    document.getElementById('bigliettoPrezzo').innerHTML = (totalOver.toFixed(2)) + '€ ' ;
 
 } else {
-    document.getElementById('bigliettoPrezzo').innerHTML = (prezzoViaggio) + '€ ' ;
+    document.getElementById('bigliettoPrezzo').innerHTML = (prezzoViaggio.toFixed(2)) + '€ ' ;
 }
   
 
